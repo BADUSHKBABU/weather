@@ -65,10 +65,10 @@ flutter:
   assets:
 #    - assets/bg/nature2.jpg
 #    - assets/bg/bg.jpg
-#    - assets/seasons/rainy.jpg
+#    - assets/img/rainy.jpg
 #    - assets/bg/bluebg.jpg
     - assets/bg/
-    - assets/seasons/
+    - assets/img/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

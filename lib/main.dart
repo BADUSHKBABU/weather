@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:weatherapp/services/bool_provider.dart';
-
 import 'package:weatherapp/services/permission_provider.dart';
 import 'package:weatherapp/services/weatherProvider.dart';
 
@@ -18,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(providers: [
       ChangeNotifierProvider(create: (_)=>locationProvider()),
       ChangeNotifierProvider(create: (_)=>Weatherprovider()),
-      ChangeNotifierProvider(create: (_)=>BoolProvider()),
+
     ],
       child: MaterialApp(
           title: 'Flutter Demo',
