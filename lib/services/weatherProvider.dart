@@ -17,17 +17,26 @@ bool get isLoading =>_isLoading;
 
 Future<void> weatherFetchingByCityName(String city) async
 {
+  if(city==null)
+  {
+    return null;
+  }
+  print("started");
   _isLoading=true;
   error="";
  try
      {
-       final url="${ApiEndpoints().base_city_url}${city}${ApiEndpoints().appId}${ApiKey}";
+       //final url=http.get(Uri.parse(url))
+       final url="${ApiEndpoints().base_city_url}${city}${ApiEndpoints().appId}${ApiKey}${ApiEndpoints().unit}";
        final response=await http.get(Uri.parse(url));
        if(response.statusCode==200)
        {
          final data=jsonDecode(response.body);
-         print(data);//write logic
+         print("weather of $city is : $data");//write logic
          _weather= Weather.fromJson(data);//convert coming json file to dart
+         print("weather is : ${_weather?.main.feelsLike}");
+         print("temperature  is : ${_weather?.main.temp}");
+         print("main  is : ${_weather?.main.tempMax}");
          notifyListeners();
        }
        else
@@ -46,7 +55,5 @@ Future<void> weatherFetchingByCityName(String city) async
   }
 
 }
-
-
 
 }

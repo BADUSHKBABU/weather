@@ -1,9 +1,9 @@
 
 //this is the original url for the thodupuzha weather :
-///    https://api.openweathermap.org/data/2.5/weather?q=thodupuzha&appid=6cd2945d94aea9e1fa85253b5665b65d
+///     https: //api.openweathermap.org/data/2.5/weather?q=dubai&appid=ad93ec9d6bcf5c35eec3b3f597b82047&units=metric
 
 //base url is :
-///https://api.openweathermap.org/data/2.5/weather
+///https://api.openweathermap.org/data/2.5/weather?q
 
 //
 

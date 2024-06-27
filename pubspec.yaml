@@ -38,7 +38,8 @@ dependencies:
   provider:
   geocoding: ^3.0.0
   geolocator: ^12.0.0
-  http: ^1.2.1
+  http:
+  intl:
 
 dev_dependencies:
   flutter_test:
@@ -62,10 +63,12 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-    - assets/bg/nature2.jpg
-    - assets/bg/bg.jpg
-    - assets/seasons/rainy.jpg
-    - assets/bg/bluebg.jpg
+#    - assets/bg/nature2.jpg
+#    - assets/bg/bg.jpg
+#    - assets/seasons/rainy.jpg
+#    - assets/bg/bluebg.jpg
+    - assets/bg/
+    - assets/seasons/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

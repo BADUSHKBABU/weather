@@ -15,7 +15,8 @@ class PlaceConverterService
             return _position[0];
           }
       }
-      catch(e){
+      catch(e)
+      {
         print("error in finding place");
       }
 return null;
