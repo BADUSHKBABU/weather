@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:weatherapp/services/SavingCityName.dart';
 import 'package:weatherapp/services/permission_provider.dart';
 import 'package:weatherapp/services/weatherProvider.dart';
 
@@ -16,12 +17,13 @@ class MyApp extends StatelessWidget {
     return MultiProvider(providers: [
       ChangeNotifierProvider(create: (_)=>locationProvider()),
       ChangeNotifierProvider(create: (_)=>Weatherprovider()),
+      ChangeNotifierProvider(create: (_)=>Savingcityname()),
 
     ],
       child: MaterialApp(
           title: 'Flutter Demo',
           theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
             useMaterial3: true,
           ),
           home:home()

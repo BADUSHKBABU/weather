@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
@@ -33,10 +34,11 @@ class locationProvider extends ChangeNotifier {
       notifyListeners();
       return;
     }
-else {
+
 
       ///check the permission
       _permisssion = await Geolocator.checkPermission();
+
       if (_permisssion == LocationPermission.denied) {
         _permisssion = await Geolocator.requestPermission();
         if (_permisssion == LocationPermission.denied) {
@@ -44,13 +46,16 @@ else {
           notifyListeners();
           return;
         }
+      }
+
         if (_permisssion == LocationPermission.deniedForever) {
           _position_lattitude_longitude = null;
           notifyListeners();
           return;
         }
-      }
-    }
+
+
+
 
         _position_lattitude_longitude = await Geolocator.getCurrentPosition();
         ///give current position as ltitude and as longitude
